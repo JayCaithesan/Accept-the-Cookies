@@ -1,0 +1,61 @@
+/* Imported Fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Poppins&display=swap');
+
+* {
+    /* Global Colour Variables */
+    --darkBrown: #3C1E18; /* Headings, Body */
+    --lightBrown: #A05A52; /* Backgrounds, Accents (buttons, dividers) */
+    --cream: #F9F1E9;  /* Backgrounds */
+    --beige: #E5D5C5; /* Secondary Accents (borders, dividers, background shading) */
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    color: var(--darkBrown);
+    font-size: 30px;
+}
+
+h1 span {
+    font-family: 'Cookie', cursive;
+    font-size: 125px;
+}
+
+hr {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.navbar {
+    background-color: var(--lightBrown);
+}
+
+.navbar-brand {
+    font-family: 'Cookie', cursive;
+    font-size: 35px;
+    color: var(--beige);
+    padding-left: 5px;
+}
+
+.nav-link {
+    color: var(--cream);
+}
+#active{
+    color: black;
+}
+
+.section-light {
+    padding: 75px;
+    background-color: var(--cream);
+}
+
+.jumbotron {
+    margin: 100px ;
+}
+
+.btn-outline-dark {
+    color: var(--cream);
+    background-color: var(--lightBrown);
+    border: var(--beige);
+}
