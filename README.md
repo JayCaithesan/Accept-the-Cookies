@@ -1,1 +1,1 @@
-# Accept-the-Cookies-
+# Accept-the-Cookies
