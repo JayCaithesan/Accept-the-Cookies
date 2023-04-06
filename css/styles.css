@@ -21,6 +21,11 @@ h1 {
     height: 100vh;
 }
 
+#pageTitle{
+    text-align: center;
+}
+
+
 
 h1 span {
     font-family: 'Cookie', cursive;
