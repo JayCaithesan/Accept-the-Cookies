@@ -3,10 +3,10 @@
 
 * {
     /* Global Colour Variables */
-    --darkBrown: #3C1E18; /* Headings, Body */
-    --lightBrown: #A05A52; /* Backgrounds, Accents (buttons, dividers) */
-    --cream: #F9F1E9;  /* Backgrounds */
-    --beige: #E5D5C5; /* Secondary Accents (borders, dividers, background shading) */
+    --darkBrown: #1D82C9; /* Headings, Body */
+    --lightBrown: #D59680; /* Backgrounds, Accents (buttons, dividers) */
+    --cream: #FFE6D6;  /* Backgrounds */
+    --beige: #A85E64; /* Secondary Accents (borders, dividers, background shading) */
     
     font-family: 'Poppins', sans-serif;
 }
@@ -15,6 +15,12 @@ h1 {
     color: var(--darkBrown);
     font-size: 30px;
 }
+#body{
+    background-color: var(--cream);
+    width: 100%;
+    height: 100vh;
+}
+
 
 h1 span {
     font-family: 'Cookie', cursive;
