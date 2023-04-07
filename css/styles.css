@@ -20,13 +20,19 @@ h1 span {
     font-size: 125px;
 }
 
+h3 {
+    color: white;
+}
+
 h5 {
     font-size: 35px;
 }
 
 hr {
     margin: 75px auto;
-    width: 75%;
+    width: 85%;
+    border-radius: 50px;
+    border: 3px solid var(--darkBrown);
 }
 
 .navbar {
@@ -64,11 +70,31 @@ hr {
     border-radius: 25px;
 }
 
-.jumbotron {
-    margin: 100px ;
+.main-hero {
+    margin: 100px;
 }
 
 .carousel-item img {
     filter: brightness(50%);
+    border-radius: 25px;
+}
+
+.login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.login-form-image {
+    margin-top: 125px;
+}
+
+.form-control {
+    padding: 15px;
+}
+
+#professional-chef-image {
+    max-width: 100%;
     border-radius: 25px;
 }
