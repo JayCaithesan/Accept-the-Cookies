@@ -3,16 +3,17 @@
 
 * {
     /* Global Colour Variables */
-    --lightBlue: #1D82C9; /* Headings, Body */
-    --lightBrown: #D59680; /* Backgrounds, Accents (buttons, dividers) */
-    --cream: #FFE6D6;  /* Backgrounds */
-    --darkBrown: #9C634F; /* Secondary Accents (borders, dividers, background shading) */
+    --darkBrown: #3C1E18; /* Headings, Body */
+    --lightBrown: #A05A52; /* Backgrounds, Accents (buttons, dividers) */
+    --cream: #F9F1E9;  /* Backgrounds */
+    --beige: #E5D5C5; /* Secondary Accents (borders, dividers, background shading) */
     
     font-family: 'Poppins', sans-serif;
 }
 
 h1 {
-    color: var(--lightBlue);
+    color: var(--darkBrown);
+    font-size: 30px;
 }
 
 h1 span {
@@ -20,81 +21,41 @@ h1 span {
     font-size: 125px;
 }
 
-h3 {
-    color: white;
-}
-
-h5 {
-    font-size: 35px;
-}
-
 hr {
-    margin: 75px auto;
-    width: 85%;
-    border-radius: 50px;
-    border: 3px solid var(--darkBrown);
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
 }
 
 .navbar {
-    background-color: var(--darkBrown);
+    background-color: var(--lightBrown);
 }
 
 .navbar-brand {
     font-family: 'Cookie', cursive;
     font-size: 35px;
-    color: var(--darkBrown);
+    color: var(--beige);
     padding-left: 5px;
 }
 
 .nav-link {
     color: var(--cream);
 }
-
-.nav-link:hover {
+#active{
     color: black;
-}
-
-#active {
-    text-decoration-line: underline;
-}
-
-#main-section {
-    background-color: var(--cream);
-    width: 100%;
-    height: 100%;
 }
 
 .section-light {
     padding: 75px;
+    background-color: var(--cream);
+}
+
+.jumbotron {
+    margin: 100px ;
+}
+
+.btn-outline-dark {
+    color: var(--cream);
     background-color: var(--lightBrown);
-    border-radius: 25px;
-}
-
-.main-hero {
-    margin: 100px;
-}
-
-.carousel-item img {
-    filter: brightness(50%);
-    border-radius: 25px;
-}
-
-.login-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.login-form-image {
-    margin-top: 125px;
-}
-
-.form-control {
-    padding: 15px;
-}
-
-#professional-chef-image {
-    max-width: 100%;
-    border-radius: 25px;
+    border: var(--beige);
 }
