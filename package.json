@@ -18,6 +18,8 @@
   "homepage": "https://github.com/JayCaithesan/Accept-the-Cookies#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "nodemon": "^2.0.22"
+    "mongoose": "^7.0.4",
+    "nodemon": "^2.0.22",
+    "pug": "^3.0.2"
   }
 }
