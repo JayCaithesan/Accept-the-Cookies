@@ -90,6 +90,11 @@ hr {
     border-radius: 25px;
 }
 
+.card-header
+{
+    background-color: var(--lightBrown);
+}
+
 .main-hero {
     margin: 100px;
 }

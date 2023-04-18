@@ -1,7 +1,6 @@
 html 
     head
         title= title 
-        title= title 
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -16,7 +15,7 @@ html
         div(class=`error${route === '/login' ? ' white-text' : ''}${route === '/processLogin' ? ' black-text' : ''}`, style="text-align: center;")= errorMessage         
         
         div.login-form(style="margin-top:-5px;")
-            form(method="post", action="/signUp", class="form")
+            form(method="post", action="/signIn", class="form")
                 div.form-outline.mb-4
                 input#email-input.form-control(type="email",name="email", placeholder="Email")
 

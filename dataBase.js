@@ -9,13 +9,12 @@ let Schema = mongoose.Schema;
 
 // Create Schema instance for accounts in our AcceptTheCookies DB
 let accountsSchema = new Schema({
-    Username: String,
-    Password: String
+    Email: String,
+    Password: String,
+    Username: String
 }, {
     collection: 'Accounts'
 });
 
-// Here we export our module (node.js) to make it available in a different file (savingdata.js)
-// See L23SL14 - An example Schema
-
+// Here we export our module (node.js) to make it available in a different file (index.js)
 module.exports.Accounts = mongoose.model('accounts', accountsSchema);
