@@ -1,5 +1,5 @@
 body{
-    background-color: #F9F1E9;
+    background-color: #FFE6D6;
 }
 .row {
     display: flex;
@@ -7,15 +7,15 @@ body{
     width: 100vw;
 }
 .column {
-    flex: 30%;
-    padding-left: 8%;
+    flex: 20%;
+    padding-left: 5%;
     height: 100%;
     width: 100%;
     padding-top: 27px;
 }
 .column2 {
     flex: 70%;
-    padding-left: 5%;
+    /* padding-left: 5%; */
     height: 100%;
     width: 100%;
     margin-top: 20px;
@@ -30,4 +30,10 @@ body{
 }
 .column2 h6{
     color: red;
+}
+h2{
+    color: #1D82C9;
+}
+iframe{
+    padding-bottom: 60px;
 }
