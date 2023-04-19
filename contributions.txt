@@ -25,7 +25,8 @@ Contributions by each group member:
     -creation of the group_members page including HTML and CSS 
         -includes the usage of:
             -font awesome
-            -bootstrap framework in general  
+            -bootstrap framework in general 
+    -helped with about page styling and creation  
 
 
 -Thanushan Satheeskumar (100784004)
