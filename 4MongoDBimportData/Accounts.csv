@@ -1,4 +1,5 @@
 Email,Password,Username,ignoreString
+admin@gmail.com,admin123,admin,empty
 jay@gmail.com,jay123,jay,empty
 james@gmail.com,james123,james,empty
 josh@gmail.com,josh123,josh,empty
