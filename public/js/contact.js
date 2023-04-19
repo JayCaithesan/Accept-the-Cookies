@@ -33,6 +33,11 @@ function saveRecord(){
         let jsonDownloadLink = $('<a href="data:' + userData + '" download="userEntry.json">download JSON</a>');
         let jsonDownload = $("#jsonDownload");
         jsonDownload.append(jsonDownloadLink);
+        // clears all the inputs of the information inputted by the user 
+        $("#emailInput").val("");
+        $("#phoneNumberInput").val("");
+        $("#nameInput").val("");
+        $("#messageInput").val("");
     }
 }
 
