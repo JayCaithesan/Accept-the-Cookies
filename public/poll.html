@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="./js/poll.js" defer></script>
+    <script src="https://kit.fontawesome.com/cd56e8ce0b.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/poll.css">
     <title>Poll</title>
 </head>
 
@@ -40,29 +43,53 @@
             </ul>
         </div>
     </nav>
-    <div id="articles">
-        <h2 id="gov_articles">Interesting Government Cookie Articles</h2>
-    </div>
-    <div id="poll">
-        <h2>Alcohol Cookie Poll</h2>
-    </div>
-    <h2>My first Vue app</h2>
-
-    <div id="app">
-        <div v-if="showCard">
-            <p>Our next GPU is a: {{ model }}, costing {{ price }}, with {{ cores }} CUDA cores.</p>
+    <div id="content">
+        <div id="articles">
+            <h2 id="gov_articles">Interesting Government Cookie Articles</h2>
         </div>
-        <!-- Notice how the button contents update -->
-        <button @click="toggleCard">
-            <span v-if="showCard">Hide card</span>
-            <span v-else>Show card</span>
-            <!-- <span v-if="!showCard">Show card</span> -->
-        </button>
-
-        <!-- v-show uses CSS to hide the element with display: none, whereas v-if removes from DOM -->
-        <!-- Inspect element with JS console. This one remains, but div-books above disappears -->
-        <!-- Adding & removing from DOM is a heavier operation, so use show -->
-        <div v-show="showCard">Currently showing card</div>
+        <div id="poll">
+            <h2>Alcohol Cookie Poll</h2>
+        </div>
+        <button class="btnPoll" type="button" id="addYes" onclick="addYes()">Yes</button>
+        <button class="btnPoll" type="button" id="addNo" onclick="addNo()">No</button>
+        <button class="btnPoll" type="button" id="addUnsure" onclick="addUnsure()">Don't Know</button>
+        <div id="pollChart">
+            <svg width="600" height="500" id="pieChart"></svg>
+        </div>
+        <div id="currentNumPlots"></div>
+        <h2>Current Numbers</h2>
+        <div id="app">
+            <div v-if="showTable">
+                <table>
+                    <tr>
+                        <th @click="orderCookieNums('cookie')">Cookie Type  <i class="fa-solid fa-arrow-down-a-z"></i></th>
+                        <th @click="orderCookieNums('sales')">Number of Cookies Sold  <i class="fa-solid fa-arrow-down-9-1"></i></th>
+                    </tr>
+                    <tr v-for="num in sortedCookieData">
+                        <td>{{num.cookie}}</td>
+                        <td>{{num.sales}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div v-else="showTable">
+                <h4><u>Top 3 Cookies:</u></h4>
+                <ol>
+                    <li>{{orderedCookies('sales')[0].cookie}} cookies with {{orderedCookies('sales')[0].sales}} sales!</li>
+                    <li>{{orderedCookies('sales')[1].cookie}} cookies with {{orderedCookies('sales')[1].sales}} sales!</li>
+                    <li>{{orderedCookies('sales')[2].cookie}} cookies with {{orderedCookies('sales')[2].sales}} sales!</li>
+                </ol>
+            </div>
+            <div id="numbersButtons">
+                <button @click="toggleTable">
+                    <span v-if="showTable">Show Main Stats</span>
+                    <span v-else>Show Table</span>
+                </button>
+            </div>
+            <div id="currentShowing"> 
+                    <div v-show="showTable">Currently showing table</div>
+                    <div v-show="!showTable">Currently showing stats</div>
+            </div>
+        </div>
     </div>
     <!-- Footer -->
     <footer class="text-center text-white mt-4" style="background-color: #9C634F;">

@@ -1,3 +1,5 @@
+let pollingData;
+let total=0;
 $(document).ready(function(){
     $.ajax({
         type: "GET",
@@ -18,27 +20,138 @@ $(document).ready(function(){
         }
     })
 })
+$.getJSON("./poll.json", function (data) {
+	// console.log(data);
+    pollingData = data;
+    formatData();
+    pieChartMaker();
+})
+function formatData(){
+    let yesVotes = pollingData[0].votes;
+    let noVotes = pollingData[1].votes;
+    let unsureVotes = pollingData[2].votes;
+    for(let i = 0; i<pollingData.length;i++)
+    {
+        total += pollingData[i].votes;
+    }
+    let yesPercent = yesVotes/total;
+    let noPercent = noVotes/total;
+    let unsurePercent = unsureVotes/total;
+    pollingData[0]["percent"] = yesPercent*100;
+    pollingData[1]["percent"] = noPercent*100;
+    pollingData[2]["percent"] = unsurePercent*100;
+    // console.log(pollingData);
+}
+function addYes(){
+    pollingData[0].votes += 1;
+    // console.log(pollingData);
+    formatData();
+    pieChartMaker();
+}
+function addNo(){
+    pollingData[1].votes += 1;
+    formatData();
+    pieChartMaker();
+}
+function addUnsure(){
+    pollingData[2].votes += 1;
+    formatData();
+    pieChartMaker();
+}
+function pieChartMaker() {
+    let svg = d3.select("#pieChart"),
+        width = svg.attr("width"),
+        height = svg.attr("height"),
+        margin = 50,
+        radius = Math.min(width,height)/2 - margin;
+
+    let data = pollingData;      
+    
+    let g = svg.append("g")
+               .attr("transform", `translate(${width/2},${height/2})`);
+    
+    let colourScale = d3.scaleOrdinal()
+                        .domain(data)
+                        .range(["#90ee90","#fa7f72","#d3e0ea"]);
+
+    let pie = d3.pie().value(function(d){
+        return d.percent;
+    });
+
+    let arc = g.selectAll("arc")
+               .data(pie(data))
+               .enter();
+
+    let section = d3.arc()
+                    .outerRadius(radius)
+                    .innerRadius(50);
+
+    arc.append("path")
+       .attr("d", section)
+       .attr("fill", function(d){
+            return colourScale(d.data.choice);
+       });
+
+    let label = d3.arc()
+                  .outerRadius(radius)
+                  .innerRadius(radius-100);
+
+    arc.append("text")
+       .attr("transform", function(d){
+            return `translate(${label.centroid(d)})`;
+       })
+       .text(function(d){
+            return d.data.choice;
+       })
+       .style("font-size", 15)
+       .style("text-anchor", "middle")
+       .attr("dy", ".35em");
+}
+
 const app = Vue.createApp({
-    // Shorthand syntax for data: function() {}
+    computed : {
+        originalCookieData() {
+        return [
+            {cookie: 'M&M', sales:693},
+            {cookie: 'Snickerdoodle', sales:240},
+            {cookie: 'Macademia Nut', sales:512},
+            {cookie: 'Double Chocolate', sales:454},
+            {cookie: 'Christmas', sales:361},
+            {cookie: 'Oatmeal', sales:482},
+            {cookie: 'Ginger', sales:410},
+            {cookie: 'Easter', sales:286},
+            {cookie: 'Brown Sugar', sales:378},
+            {cookie: 'Chocolate Chip', sales:824},
+            {cookie: 'Birthday Cake', sales:517},
+            {cookie: 'Chocolate Dip', sales:389},
+        ];  
+        }
+    },
     data() {
       return {
-        // The properties of this returned object are then accessible from our template (within e.g., index.html)
-        model: '4070 Ti',
-        price: '$1600',
-        cores: 7680,
-        // Should we show the graphics card?
-        showCard: true
+        sortedCookieData: [],
+        showTable: true
       }
     },
+    mounted(){
+        this.sortedCookieData = this.originalCookieData;
+        console.log(this.sortedCookieData);
+    },
     methods: {
-        changeModel(model, price, cores) {
-          this.model = model
-          this.price = price
-          this.cores = cores
+        toggleTable() {
+            this.showTable = !this.showTable;
         },
-        toggleCard() {
-            // Flip the boolean value
-            this.showCard = !this.showCard;
+        orderCookieNums(type){
+            if(type == 'cookie')
+            {
+                this.sortedCookieData.sort((x,y) => (x[type] < y[type] ? -1 : 1));
+            }
+            else{
+                this.sortedCookieData.sort((x,y) => (x[type] > y[type] ? -1 : 1));
+            }
+        },
+        orderedCookies(type){
+            return this.sortedCookieData.sort((x,y) => (x[type] > y[type] ? -1 : 1));
         }
       }
   }).mount('#app')
