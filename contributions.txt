@@ -28,6 +28,7 @@ Contributions by each group member:
             -bootstrap framework in general 
     -helped with about page styling and creation  
     -performed the merge of each branch of the GitHub and consolidated all the work to create the finished application
+        -worked with all js, HTML, CSS, JSON, pug files
 
 
 -Thanushan Satheeskumar (100784004)=
@@ -36,7 +37,21 @@ Contributions by each group member:
     - Products Page (Structure with HTML, Styling with Bootstrap + CSS, Functionality with JavaScript + jQuery + AJAX)
     - Footer (Structure with HTML, Styling with Bootstrap + CSS)
 
--James Yang (100838500)
+-James Yang (100838500)=
+    -Sign in/ sign up functionality
+		-pug
+		-session ID
+		-access mongodb(database)-insert/change document
+	-Live chat
+		-pug
+		-socket/multi threading
+	-files involve:
+		dataBase.js,index.js
+		accessAbout.html,accessIndex.html,accessContact.html,accesProduct.html
+		accountInfo.pug,adminListChat.pug,login.pug,signUp.pug
+		chat.js
+		chat.css,adminChat.css
+		Account.csv
 
 -Jayanthan Caithesan (100828033)
 
