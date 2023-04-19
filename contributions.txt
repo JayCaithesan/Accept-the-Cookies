@@ -1,0 +1,39 @@
+Contributions by each group member:
+
+-Shian Li Chen (100813628) = 
+    -creation of the contact page including HTML, CSS and JS
+        -includes the usage of:
+            -font awesome
+            -bootstrap forms and framework in general  
+            -JQuery
+            -Regular Expressions
+            -downloading JSON data
+            -Dynamic HTML (DHTML)
+    -creation of the poll page including HTML, CSS and JS
+        -includes the usage of:
+            -font awesome
+            -bootstrap framework in general  
+            -JQuery
+            -D3
+            -SVG
+            -Dynamic HTML (DHTML)
+            -Ajax
+            -Vue Condition Rendering 
+            -Vue Data and Methods
+            -Vue app
+    -creation and usage of the sample data from the poll.json file 
+    -creation of the group_members page including HTML and CSS 
+        -includes the usage of:
+            -font awesome
+            -bootstrap framework in general  
+
+
+-Thanushan Satheeskumar (100784004)
+
+-James Yang (100838500)
+
+-Jayanthan Caithesan (100828033)
+
+-Ryan Don (100824494)
+
+-Joshua Jesuthasan (100820441)
