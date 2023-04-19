@@ -70,18 +70,22 @@
         <!-- table or list of top stats for cookies and sales numbers -->
         <h2>Current Numbers</h2>
         <div id="app">
+            <!-- shows table if showTable is true -->
             <div v-if="showTable">
                 <table>
                     <tr>
+                        <!-- allows for ordering cookies based on alphabetical order or number of sales -->
                         <th @click="orderCookieNums('cookie')">Cookie Type  <i class="fa-solid fa-arrow-down-a-z"></i></th>
                         <th @click="orderCookieNums('sales')">Number of Cookies Sold  <i class="fa-solid fa-arrow-down-9-1"></i></th>
                     </tr>
                     <tr v-for="num in sortedCookieData">
+                        <!-- displays all the cookie names and number of sales in a table  -->
                         <td>{{num.cookie}}</td>
                         <td>{{num.sales}}</td>
                     </tr>
                 </table>
             </div>
+            <!-- shows summarized data as a list if showTable is false -->
             <div v-else="showTable">
                 <h4><u>Top 3 Cookies:</u></h4>
                 <ol>
@@ -90,12 +94,14 @@
                     <li>{{orderedCookies('sales')[2].cookie}} cookies with {{orderedCookies('sales')[2].sales}} sales!</li>
                 </ol>
             </div>
+            <!-- botton that toggles between table and main stats  -->
             <div id="numbersButtons">
                 <button @click="toggleTable">
                     <span v-if="showTable">Show Main Stats</span>
                     <span v-else>Show Table</span>
                 </button>
             </div>
+            <!-- message to indicate what is currently being shown  -->
             <div id="currentShowing"> 
                     <div v-show="showTable">Currently showing table</div>
                     <div v-show="!showTable">Currently showing stats</div>
