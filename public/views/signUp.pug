@@ -10,22 +10,21 @@ html
         div.login-form-image.text-center
             img(src="images/cookie.png", alt="Cookie Logo", width="150")
 
-            h2.text-center.pb-1 Sign in
+            h2.text-center.pb-1 Sign up
 
-        div(class=`error${route === '/login' ? ' white-text' : ''}${route === '/processLogin' ? ' black-text' : ''}`, style="text-align: center;")= errorMessage         
+        div(class=`error${route === '/signUp' ? ' white-text' : ''}${route === '/newAccount' ? ' black-text' : ''}`, style="text-align: center;")= errorMessage         
         
         div.login-form(style="margin-top:-5px;")
-            form(method="post", action="/signIn", class="form")
+            form(method="post", action="/newAccount", class="form")
                 div.form-outline.mb-4
                 input#email-input.form-control(type="email",name="email", placeholder="Email", required)
 
                 div.form-outline.mb-4
                 input#password-input.form-control(type="password",name="password", placeholder="Password", required)
-                br
-                button.btn.btn-primary.btn-block.mb-4 Sign in
 
-        div.text-center(style="margin-top:-15px;")
-            form(method="get", action="/signUp", class="form")
-                p(style='font-size:10px;') Don't have an account yet?
-                button.btn.btn-link.btn-sm Sign up
+                div.form-outline.mb-4
+                input#password-input.form-control(type="text",name="username", placeholder="Username", required)
+                br
+                button.btn.btn-primary.btn-block.mb-4 Sign up
+
 

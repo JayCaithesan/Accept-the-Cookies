@@ -39,6 +39,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+// login page
 app.get('/login', function (request, response) {
     response.render('login', {
         title: 'Login',
@@ -52,7 +53,14 @@ async function userExists(email,password) {
     let index = 0;
     const accounts = await dataBase.Accounts.find();
     const exists = accounts.some(function(element) {
-        return (element.Email === email  && element.Password === password);
+        if(password == "")
+        {
+            return element.Email === email;
+        }
+        else
+        {
+            return (element.Email === email  && element.Password === password);
+        }
     });
     return exists;
 }
@@ -68,9 +76,10 @@ async function findIndexByEmail(email) {
     return -1;
 }
 
+// store current user's email
 let currentEmail = "";
 
-// sign in page
+// sign in page - process
 app.post('/signIn', async function (request, response) {
     let email = request.body.email;
     currentEmail = email;
@@ -91,12 +100,60 @@ app.post('/signIn', async function (request, response) {
     }
 });
 
+// direct to sign up page
+app.get('/signUp', async function (request, response){
+    response.render('signUp', {
+        title: 'Sign up',
+        errorMessage: 'Adjust height text.',
+        route: '/signUp'
+    });
+});
+
+// process new account sign up
+app.post('/newAccount', async function (request, response){
+    const accounts = await dataBase.Accounts.find();
+    let username = request.body.username;
+    let password = request.body.password;
+    let email = request.body.email;
+
+    const exists = await userExists(email,"");
+
+    if(exists)
+    {
+        response.render('signUp', {
+            title: 'Sign up',
+            errorMessage: "Sorry, email exist.",
+            route: '/newAccount'
+        });
+    }
+    else
+    {
+        const Accounts = dataBase.Accounts;
+        // Insert the new account into the database
+        const newAccount = new Accounts({
+            Email: email,
+            Password: password,
+            Username: username
+        });
+        await newAccount.save();
+
+        // add session cookie, auto sign in for new user
+        currentEmail = email;
+        request.session.email = email;
+        console.log("in new: ", request.session.email)
+        response.redirect('./accessIndex.html');
+    }
+});
+
 // access account info page
 app.get('/accountInfo', async function (request, response) {
+    console.log("in acc: ", request.session.email)
     // check if the user has a current session on landing
     const accounts = await dataBase.Accounts.find();
-    // see if variable currentEmail == "" then return to login page, else do ...
-    if(currentEmail.length == "")
+
+    // check if email not exist in database return to login page, else do ...
+    const accIndex = await findIndexByEmail(currentEmail);
+    if(accIndex == -1)
     {
         response.render('login', {
             title: 'Login',
@@ -106,9 +163,16 @@ app.get('/accountInfo', async function (request, response) {
     }
     else
     {
-        // check if email not exist in database return to login page, else do ...
-        const accIndex = await findIndexByEmail(currentEmail);
-        if(accIndex == -1)
+        // check if user has logged in access page, else return to login
+        if(request.session.email)
+        {
+            response.render('accountInfo', {
+                title: 'Account',
+                email: accounts[accIndex].Email,
+                username: accounts[accIndex].Username
+            });
+        }
+        else
         {
             response.render('login', {
                 title: 'Login',
@@ -116,31 +180,10 @@ app.get('/accountInfo', async function (request, response) {
                 route: '/login'
             });
         }
-        else
-        {
-            // check if user has logged in access page, else return to login
-            if(request.session.email)
-            {
-                response.render('accountInfo', {
-                    title: 'Account',
-                    email: accounts[accIndex].Email,
-                    username: accounts[accIndex].Username
-                });
-            }
-            else
-            {
-                response.render('login', {
-                    title: 'Login',
-                    errorMessage: 'Adjust height text.',
-                    route: '/login'
-                });
-            }
-        }
     }
+    
 
 });
-
-
 
 // account info update
 app.post('/accessAccountInfoUpdated', async function (request, response) {
@@ -200,12 +243,12 @@ app.post('/accessAccountInfoUpdated', async function (request, response) {
 
 });
 
+// logout remove session cookies
 app.get('/logout', (request, response) => {
     // delete information from the session
     request.session.email = '';
     response.sendFile(__dirname + '/public/index.html');
 });
-
 
 // Use environment variable specified at command line, or if none provided, 3000 default
 app.set('port', process.env.PORT || 3000);

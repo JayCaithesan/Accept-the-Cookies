@@ -13,7 +13,8 @@ let accountsSchema = new Schema({
     Password: String,
     Username: String
 }, {
-    collection: 'Accounts'
+    collection: 'Accounts',
+    versionKey: false  // disable version key
 });
 
 // Here we export our module (node.js) to make it available in a different file (index.js)

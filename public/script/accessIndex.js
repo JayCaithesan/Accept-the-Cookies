@@ -2,22 +2,31 @@
 $(document).ready(function(){
     var accountLink = document.querySelector('.nav-item.dropdown a.nav-link');
     var dropDownMenu = document.querySelector('.nav-item.dropdown .dropdown-menu');
+    var timer;
+    
     accountLink.addEventListener('mouseover', function() {
-        dropDownMenu.classList.add('show');
+      clearTimeout(timer);
+      dropDownMenu.classList.add('show');
     });
-
+    
     // add an event listener to keep the drop-down menu open when hovering over it
     dropDownMenu.addEventListener('mouseover', function() {
-        dropDownMenu.classList.add('show');
+      clearTimeout(timer);
+      dropDownMenu.classList.add('show');
     });
-
+    
     // add an event listener to hide the menu when the mouse leaves the link or menu
     accountLink.addEventListener('mouseout', function() {
+      timer = setTimeout(function() {
         dropDownMenu.classList.remove('show');
+      }, 500);
     });
     dropDownMenu.addEventListener('mouseout', function() {
+      timer = setTimeout(function() {
         dropDownMenu.classList.remove('show');
+      }, 500);
     });
+    
 
 });
 
