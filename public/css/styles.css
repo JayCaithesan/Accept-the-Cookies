@@ -57,11 +57,31 @@ hr {
 #active {
     text-decoration-line: underline;
 }
+#picture{
+    text-align: center;
+    margin: 25px;
 
+}
+#paragraph{
+    text-align: center;
+    
+    
+}
+.aboutText{
+    text-align: center;
+    color: black;
+}
 #main-section {
     background-color: var(--cream);
     width: 100%;
     height: 100%;
+}
+#aboutText{
+    font-family: 'Times New Roman', Times, serif;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 50px;
 }
 
 .section-light {
