@@ -30,7 +30,11 @@ Contributions by each group member:
     -performed the merge of each branch of the GitHub and consolidated all the work to create the finished application
 
 
--Thanushan Satheeskumar (100784004)
+-Thanushan Satheeskumar (100784004)=
+    - Navbar (Structure with HTML, Styling with Bootstrap + CSS, Logo Creation with Canva.com)
+    - Home Page (Structure with HTML, Styling with Bootstrap + CSS, Functionality with jQuery)
+    - Products Page (Structure with HTML, Styling with Bootstrap + CSS, Functionality with JavaScript + jQuery + AJAX)
+    - Footer (Structure with HTML, Styling with Bootstrap + CSS)
 
 -James Yang (100838500)
 
