@@ -43,6 +43,11 @@ Contributions by each group member:
     - Home Page (Structure with HTML, Styling with Bootstrap + CSS, Functionality with jQuery)
     - Products Page (Structure with HTML, Styling with Bootstrap + CSS, Functionality with JavaScript + jQuery + AJAX)
     - Footer (Structure with HTML, Styling with Bootstrap + CSS)
+    - files involved with: 
+        -HTML: index.html,product.html
+        -CSS: about.css,styles.css
+        -IMG: imported all jpg and png files
+        -JS: product.js
 
 -James Yang (100838500)=
     -Sign in/ sign up functionality
