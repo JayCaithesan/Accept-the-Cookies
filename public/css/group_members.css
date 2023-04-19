@@ -1,0 +1,23 @@
+#creators{
+    margin: 0em auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+#creators th{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+#creators td{
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+#creators_text{
+    margin: 0em auto;
+    text-align: center;
+    padding: 20px;
+}
+body{
+    background-color: #FFE6D6;
+}

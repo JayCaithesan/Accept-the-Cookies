@@ -90,6 +90,11 @@ hr {
     border-radius: 25px;
 }
 
+.card-header
+{
+    background-color: var(--lightBrown);
+}
+
 .main-hero {
     margin: 100px;
 }
@@ -117,4 +122,17 @@ hr {
 #professional-chef-image {
     max-width: 100%;
     border-radius: 25px;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+.white-text {
+    color: white;
+}
+
+.black-text{
+    color:black;
 }
