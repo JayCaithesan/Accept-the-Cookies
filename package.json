@@ -1,0 +1,29 @@
+{
+  "name": "accept-the-cookies",
+  "version": "4.2.1",
+  "description": "Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayCaithesan/Accept-the-Cookies.git"
+  },
+  "author": "Team Cookies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayCaithesan/Accept-the-Cookies/issues"
+  },
+  "homepage": "https://github.com/JayCaithesan/Accept-the-Cookies#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.0.4",
+    "nodemon": "^2.0.22",
+    "pug": "^3.0.2",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1",
+    "uuid": "^9.0.0"
+  }
+}
