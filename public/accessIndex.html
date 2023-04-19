@@ -11,8 +11,11 @@
         <!-- Used code snippets from Bootstrap-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/styles.css">
+        <script src="/socket.io/socket.io.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
         <script src="./script/accessIndex.js"></script>
+        <script src="./script/chat.js"></script>
+        <link rel="stylesheet" href="./css/chat.css">
     </head>
     <body>
         <div id = "main-section">
@@ -139,6 +142,21 @@
                             <img id="professional-chef-image" src="images/chef.png" alt="">
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="liveChat">
+                <button class="open-button" id="open_button" onclick="openForm()">Live Chat</button>
+
+                <div class="chat-popup" id="myForm">
+                <form class="form-container">
+                    <label for="msg"><b>Chat</b></label>
+                    <div id="waitlist-container" class="waitList-white">Adjust height text</div>
+                    <textarea name="chatLog" id="chat-log" readonly></textarea>
+                    <textarea placeholder="Type message.." id="message-input" name="chatInput"></textarea>
+                
+                    <button type="button" class="btn" id="send-button">Send</button>
+                    <button type="button" class="btn cancel" id="close-button" onclick="closeForm()">Close</button>
+                </form>
                 </div>
             </div>
 
