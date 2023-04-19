@@ -265,7 +265,11 @@ let numUsers = 0;
 // Array to store users waiting to connect
 let waitlist = [];
 
+// admin socket
 let admin = "";
+
+// user socket
+let currentUser = "";
 
 // Create a socket connection
 io.on('connection', (socket) => {
@@ -281,6 +285,10 @@ io.on('connection', (socket) => {
     {
         admin = socket;
     }
+    else if(numUsers == 2)
+    {
+        currentUser = socket;
+    }
 
     // Listen for messages from the client
     socket.on('chat-message', (data) => {
@@ -289,11 +297,13 @@ io.on('connection', (socket) => {
       // emit message to all connected users
       if(socket == admin)
       {
-        io.emit('chat-message', `(Agent): ${data}`);
+        admin.emit('chat-message', `(Agent): ${data}`);
+        currentUser.emit('chat-message', `(Agent): ${data}`);
       }
       else
       {
-        io.emit('chat-message',`(User): ${data}`);
+        admin.emit('chat-message', `(User): ${data}`);
+        currentUser.emit('chat-message', `(User): ${data}`);
       }
     });
   } 
@@ -324,7 +334,7 @@ io.on('connection', (socket) => {
       }
     }
     numUsers--;
-
+    console.log("current numUsers = ", numUsers);
     // Check if a slot is available
     if (numUsers < 2 && waitlist.length > 0) {
       console.log("enters")
@@ -336,6 +346,8 @@ io.on('connection', (socket) => {
 
       // increment numUsers
       numUsers++;
+
+      currentUser = nextSocket;
     
       // Listen for messages from the client
       nextSocket.on('chat-message', (data) => {
@@ -344,11 +356,13 @@ io.on('connection', (socket) => {
         // emit message to all connected users
         if(socket == admin)
         {
-          io.emit('chat-message', `(Agent): ${data}`);
+            admin.emit('chat-message', `(Agent): ${data}`);
+            currentUser.emit('chat-message', `(Agent): ${data}`);
         }
         else
         {
-          io.emit('chat-message',`(User): ${data}`);
+            admin.emit('chat-message', `(User): ${data}`);
+            currentUser.emit('chat-message', `(User): ${data}`);
         }
       });
     }
