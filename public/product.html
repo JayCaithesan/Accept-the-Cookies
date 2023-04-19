@@ -39,30 +39,35 @@
             </nav>
 
             <div class="container">
-                <button type="button" id="filter-toggle" class="btn btn-primary mt-3">Show Filters</button>
+                <button type="button" id="filter-toggle" class="btn btn-secondary mt-3">Show Filters</button>
 
                 <!-- Filters -->
                 <br>
                 <div class="row d-none" id="filter-section">
                     <div class="col-md-2"></div>
-                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <p>Name</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="e.g. Snickerdoodle" id="name">
+                        </div>
+                    </div>
                     <div class="col-md-2">
                         <p>Price</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="chocolate">
-                            <label class="form-check-label" for="chocolate">
-                                Under $5
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="vanilla">
-                            <label class="form-check-label" for="vanilla">
+                            <input class="form-check-input" type="checkbox" value="" id="under15">
+                            <label class="form-check-label" for="under15">
                                 Under $15
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="vanilla">
-                            <label class="form-check-label" for="vanilla">
+                            <input class="form-check-input" type="checkbox" value="" id="under20">
+                            <label class="form-check-label" for="under20">
+                                Under $20
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="under25">
+                            <label class="form-check-label" for="under25">
                                 Under $25
                             </label>
                         </div>
@@ -76,35 +81,60 @@
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="vanilla">
-                            <label class="form-check-label" for="vanilla">
-                                Vanilla
+                            <input class="form-check-input" type="checkbox" value="" id="sugar">
+                            <label class="form-check-label" for="sugar">
+                                Sugar
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="vanilla">
-                            <label class="form-check-label" for="vanilla">
-                                Peanut Butter
+                            <input class="form-check-input" type="checkbox" value="" id="nuts">
+                            <label class="form-check-label" for="nuts">
+                                Nuts
                             </label>
                         </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="oatmeal">
+                            <label class="form-check-label" for="oatmeal">
+                                Oatmeal
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="spices">
+                            <label class="form-check-label" for="spices">
+                                Spices
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="special">
+                            <label class="form-check-label" for="special">
+                                Special
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="celebration">
+                            <label class="form-check-label" for="celebration">
+                                Celebration
+                            </label>
+                        </div>
+
                     </div>
                     <div class="col-md-2">
                         <p>Restrictions</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="chocolate">
-                            <label class="form-check-label" for="chocolate">
+                            <input class="form-check-input" type="checkbox" value="" id="nut-free">
+                            <label class="form-check-label" for="nut-free">
                                 Nut-Free
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="vanilla">
-                            <label class="form-check-label" for="vanilla">
+                            <input class="form-check-input" type="checkbox" value="" id="gluten-free">
+                            <label class="form-check-label" for="gluten-free">
                                 Gluten-Free
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="vanilla">
-                            <label class="form-check-label" for="vanilla">
+                            <input class="form-check-input" type="checkbox" value="" id="vegan">
+                            <label class="form-check-label" for="vegan">
                                 Vegan
                             </label>
                         </div>
@@ -116,46 +146,9 @@
                 <hr>
 
                 <!-- Cookies -->
-                <h4>Our Cookies</h4>
+                <h4 class="text-center">Our Cookies</h4>
                 <br>
-                <div class="row row-cols-1 row-cols-md-4 g-4">
-                    <div class="col">
-                        <div class="h-100">
-                            <img src="images/samplecookie1.jpg" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">M&Ms</h5>
-                                <p class="card-text">$1.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="h-100">
-                        <img src="images/samplecookie2.jpg" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Snickerdoodle</h5>
-                                <p class="card-text">$2.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="h-100">
-                        <img src="images/samplecookie3.jpg" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Macademia Nut</h5>
-                                <p class="card-text">$3.99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="h-100">
-                        <img src="images/samplecookie4.jpg" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Double Chocolate</h5>
-                                <p class="card-text">$4.99</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="row row-cols-1 row-cols-md-4 g-4" id="cookies-container"></div>
             </div>
 
             <hr>
@@ -167,5 +160,8 @@
                 </div>
             </footer>
         </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/product.js"></script>
     </body>
 </html>
