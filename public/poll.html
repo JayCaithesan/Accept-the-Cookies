@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-fixed-top">
         <div>
             <a class="navbar-brand text-white">
@@ -50,19 +51,23 @@
         </div>
     </nav>
     <div id="content">
+        <!-- addition of government articles and link -->
         <div id="articles">
             <h2 id="gov_articles">Interesting Government Cookie Articles</h2>
         </div>
         <div id="poll">
             <h2>Alcohol Cookie Poll</h2>
         </div>
+        <!-- buttons to add to poll -->
         <button class="btnPoll" type="button" id="addYes" onclick="addYes()">Yes</button>
         <button class="btnPoll" type="button" id="addNo" onclick="addNo()">No</button>
         <button class="btnPoll" type="button" id="addUnsure" onclick="addUnsure()">Don't Know</button>
+        <!-- creation of pie chart with voting data  -->
         <div id="pollChart">
             <svg width="600" height="500" id="pieChart"></svg>
         </div>
         <div id="currentNumPlots"></div>
+        <!-- table or list of top stats for cookies and sales numbers -->
         <h2>Current Numbers</h2>
         <div id="app">
             <div v-if="showTable">
