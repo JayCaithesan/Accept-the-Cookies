@@ -94,7 +94,7 @@ function pieChartMaker() {
 
     let label = d3.arc()
                   .outerRadius(radius)
-                  .innerRadius(radius-100);
+                  .innerRadius(radius-150);
 
     arc.append("text")
        .attr("transform", function(d){
