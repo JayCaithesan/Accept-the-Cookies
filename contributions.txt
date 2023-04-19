@@ -49,7 +49,7 @@ Contributions by each group member:
 		dataBase.js,index.js
 		accessAbout.html,accessIndex.html,accessContact.html,accesProduct.html
 		accountInfo.pug,adminListChat.pug,login.pug,signUp.pug
-		chat.js
+		chat.js,accessIndex.js
 		chat.css,adminChat.css
 		Account.csv
 
