@@ -27,6 +27,7 @@ Contributions by each group member:
             -font awesome
             -bootstrap framework in general 
     -helped with about page styling and creation  
+    -performed the merge of each branch of the GitHub and consolidated all the work to create the finished application
 
 
 -Thanushan Satheeskumar (100784004)
