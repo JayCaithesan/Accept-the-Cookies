@@ -203,6 +203,7 @@ app.post('/accessAccountInfoUpdated', async function (request, response) {
     const accounts = await dataBase.Accounts.find();
     if(request.session.email)
     {
+        let email = request.body.email;
         let username = request.body.username;
         let password = request.body.password;
         let confirmPassword = request.body.confirmPassword;
@@ -223,6 +224,7 @@ app.post('/accessAccountInfoUpdated', async function (request, response) {
             if(username != accounts[accIndex].Username && (password == "" && confirmPassword == ""))
             {
                 await dataBase.Accounts.updateOne(
+                    { Email: email },
                     { $set: { Username: username} }
                 );
             }
@@ -230,6 +232,7 @@ app.post('/accessAccountInfoUpdated', async function (request, response) {
             else if(username == accounts[accIndex].Username && (password != '' && confirmPassword != ''))
             {
                 await dataBase.Accounts.updateOne(
+                    { Email: email },
                     { $set: { Password: password} }
                 );
             }
@@ -237,6 +240,7 @@ app.post('/accessAccountInfoUpdated', async function (request, response) {
             else if(username != accounts[accIndex].Username && (password != '' && confirmPassword != ''))
             {
                 await dataBase.Accounts.updateOne(
+                    { Email: email },
                     { $set: { username: username, password: password } }
                 );
             }
