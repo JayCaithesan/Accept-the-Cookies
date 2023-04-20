@@ -53,20 +53,20 @@ Contributions by each group member:
 
 -James Yang (100838500)=
     -Sign in/ sign up functionality
-		-pug
-		-session ID
-		-access mongodb(database)-insert/change document
-	-Live chat
-		-pug
-		-socket/multi threading
+        -pug
+        -session ID
+        -access mongodb(database)-insert/change document
+    -Live chat
+        -pug
+        -socket/multi threading
 
-	-files involved with:
-		-JS: dataBase.js,index.js
-		-HTML: accessAbout.html,accessIndex.html,accessContact.html,accesProduct.html
-		-Views/Pug: accountInfo.pug,adminListChat.pug,login.pug,signUp.pug
-		-JS: chat.js,accessIndex.js
-		-CSS: chat.css,adminChat.css
-		-CSV: Account.csv
+    -files involved with:
+        -JS: dataBase.js,index.js
+        -HTML: accessAbout.html,accessIndex.html,accessContact.html,accesProduct.html
+        -Views/Pug: accountInfo.pug,adminListChat.pug,login.pug,signUp.pug
+        -JS: chat.js,accessIndex.js
+        -CSS: chat.css,adminChat.css
+        -CSV: Account.csv
 
 -Jayanthan Caithesan (100828033)
 
