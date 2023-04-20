@@ -177,7 +177,22 @@
                     </div>
                 </div>
             </div>
+            <!-- live chat button  -->
+            <div class="liveChat">
+                <button class="open-button" id="open_button" onclick="openForm()">Live Chat</button>
 
+                <div class="chat-popup" id="myForm">
+                <form class="form-container">
+                    <label for="msg"><b>Chat</b></label>
+                    <div id="waitlist-container" class="waitList-white">Adjust height text</div>
+                    <textarea name="chatLog" id="chat-log" readonly></textarea>
+                    <textarea placeholder="Type message.." id="message-input" name="chatInput"></textarea>
+                
+                    <button type="button" class="btn" id="send-button">Send</button>
+                    <button type="button" class="btn cancel" id="close-button" onclick="closeForm()">Close</button>
+                </form>
+                </div>
+            </div>
             <!-- Footer -->
             <footer class="text-center text-white mt-4" style="background-color: #9C634F;">
                 <div class="text-center p-3">

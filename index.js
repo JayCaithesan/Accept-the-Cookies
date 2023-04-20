@@ -387,9 +387,3 @@ app.get('/logout', (request, response) => {
     request.session.email = '';
     response.sendFile(__dirname + '/public/index.html');
 });
-
-// Use environment variable specified at command line, or if none provided, 3000 default
-// app.set('port', process.env.PORT || 3000);
-// app.listen(app.get('port'), function () {
-//     console.log(`Listening on port ${app.get('port')}`);
-// });
