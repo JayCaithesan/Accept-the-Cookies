@@ -26,13 +26,47 @@ Contributions by each group member:
         -includes the usage of:
             -font awesome
             -bootstrap framework in general 
-    -helped with about page styling and creation  
+    -helped with about and index page styling and creation  
     -performed the merge of each branch of the GitHub and consolidated all the work to create the finished application
+        -worked with all js, HTML, CSS, JSON, pug files
+
+    -files involved with (creating/editing/merging):
+        -CSS: about.css,contact.css,group_members.css,poll.css,styles.css
+        -JS: contact.js,poll.js,index.js
+        -Views/Pug: accountInfo.pug
+        -HTML: about.html,contact.html,group_members.html,index.html,poll.html,accessAbout.html,accessContact.html,accessGroupMembers.html,
+               accessIndex.html,accessPoll.html,accessProduct.html
+        -JSON: poll.json
 
 
--Thanushan Satheeskumar (100784004)
+-Thanushan Satheeskumar (100784004)=
+    - Navbar (Structure with HTML, Styling with Bootstrap + CSS, Logo Creation with Canva.com)
+    - Home Page (Structure with HTML, Styling with Bootstrap + CSS, Functionality with jQuery)
+    - Products Page (Structure with HTML, Styling with Bootstrap + CSS, Functionality with JavaScript + jQuery + AJAX)
+    - Footer (Structure with HTML, Styling with Bootstrap + CSS)
 
--James Yang (100838500)
+    - files involved with: 
+        -HTML: index.html,product.html,group_members.html
+        -CSS: about.css,styles.css,group_members.css
+        -IMG: imported all jpg and png files
+        -JS: product.js
+
+-James Yang (100838500)=
+    -Sign in/ sign up functionality
+        -pug
+        -session ID
+        -access mongodb(database)-insert/change document
+    -Live chat
+        -pug
+        -socket/multi threading
+
+    -files involved with:
+        -JS: dataBase.js,index.js
+        -HTML: accessAbout.html,accessIndex.html,accessContact.html,accesProduct.html
+        -Views/Pug: accountInfo.pug,adminListChat.pug,login.pug,signUp.pug
+        -JS: chat.js,accessIndex.js
+        -CSS: chat.css,adminChat.css
+        -CSV: Account.csv
 
 -Jayanthan Caithesan (100828033)
 

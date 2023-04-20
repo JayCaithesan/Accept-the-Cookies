@@ -11,10 +11,12 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="./css/group_members.css">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
         <script src="https://kit.fontawesome.com/cd56e8ce0b.js" crossorigin="anonymous"></script>
+        <script src="./script/accessIndex.js"></script>
     </head>
     <body>
-        <!-- Navigation bar -->
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-fixed-top">
             <div>
                 <a class="navbar-brand text-white">
@@ -24,26 +26,33 @@
 
             <div>
                 <ul class="navbar-nav">
-                    <li class = "nav-item">
-                        <a class = "nav-link" href = "index.html">Home</a>
-                    </li>
-                    <li class = "nav-item">
-                        <a class = "nav-link" href = "product.html">Products</a>
-                    </li>
                     <li class = "nav-item active">
-                        <a class = "nav-link" href = "about.html">About Us</a>
+                        <a class = "nav-link" href = "accessIndex.html">Home</a>
                     </li>
                     <li class = "nav-item">
-                        <a class = "nav-link" href = "contact.html">Contact Us</a>
+                        <a class = "nav-link" href = "accessProduct.html">Products</a>
                     </li>
                     <li class = "nav-item">
-                        <a class = "nav-link" href = "poll.html">Poll</a>
+                        <a class = "nav-link" href = "accessAbout.html">About Us</a>
                     </li>
                     <li class = "nav-item">
-                        <a class = "nav-link" href = "group_members.html" id = "active">Creators</a>
+                        <a class = "nav-link" href = "accessContact.html">Contact Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login">Sign in</a>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "accessPoll.html">Poll</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "accessGroupMembers.html"  id = "active">Creators</a>
+                    </li>
+                    <!-- access dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            My Account
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/accountInfo">Account</a>
+                            <a class="dropdown-item" href="/logout">Sign out</a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -93,7 +102,7 @@
         <footer class="text-center text-white mt-4" style="background-color: #9C634F;">
             <div class="text-center p-3">
                 © 2020 Copyright - 
-                <a class="text-white" href="index.html">AcceptTheCookies</a>
+                <a class="text-white" href="accessIndex.html">AcceptTheCookies</a>
             </div>
         </footer>
     </body>
