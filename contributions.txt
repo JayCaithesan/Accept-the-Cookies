@@ -81,7 +81,26 @@ Contributions by each group member:
         -Readme: created readme
         -Recording: recorded project video, explained website design and use
 
--Ryan Don (100824494)
+-Ryan Don (100824494)=
+    -creation of cart page and creation/usage of cart.json file
+        -includes the usage of:
+            -font awesome
+            -bootstrap framework
+            -JQuery
+            -Ajax
+            -Dynamic HTML
+    -added functionality for adding to cart from the product page
+    -added styling and css animations to cart page and product page
+    -account used for icons on fontawesome.com
+    -likeness used in about us page
+
+    -files involved in:
+        -HTML: cart.html,product.html
+        -CSS: about.css,styles.css,cart.css
+        -JS: product.js,cart.js
+        -JSON: cart.json
+        -Readme: created readme
+        -Recording: recorded project video, explained website design and use
 
 -Joshua Jesuthasan (100820441)
     -did not contribute
