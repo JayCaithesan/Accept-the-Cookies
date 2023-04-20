@@ -37,5 +37,16 @@ Contributions by each group member:
 -Jayanthan Caithesan (100828033)
 
 -Ryan Don (100824494)
+    -creation of cart page and creation/usage of cart.json file
+        -includes the usage of:
+            -font awesome
+            -bootstrap framework
+            -JQuery
+            -Ajax
+            -Dynamic HTML
+    -added functionality for adding to cart from the product page
+    -added styling and css animations to cart page and product page
+    -account used for icons on fontawesome.com
+    -likeness used in about us page
 
 -Joshua Jesuthasan (100820441)

@@ -1,14 +1,19 @@
+var cookieList
+
 $(document).ready(function() {
     // Imports cookies.json for products page
     fetch('cookies.json')
     .then((resp) => resp.json())
     .then(function(data) {
-        let cookieList = data.cookies;
+        cookieList = data.cookies;
         // Go over each cookie in the JSON data and create a product element for it
         cookieList.forEach(cookie => {
             var eachProduct = `<div class="col">
                                     <div class="h-100">
-                                        <img src="${cookie.image}" class="card-img-top">
+                                        <div onclick="addToCart(event)" style="position: relative; z-index: 1">
+                                            <img src="${cookie.image}" class="card-img-top ${cookie.name}">
+                                            <div class="text-overlay" style="position: absolute; top: 43%; left:26%; z-index: 3; font-size: x-large">Add To Cart</div>
+                                        </div>
                                         <div class="card-body">
                                             <h5 class="card-title">${cookie.name}</h5>
                                             <p class="card-text">$${cookie.price.toFixed(2)} per Dozen</p>
@@ -103,9 +108,12 @@ $(document).ready(function() {
             }
             else {
                 filteredCookies.forEach(cookie => {
-                    var eachProduct = `<div class="col">
+                    var eachProduct =  `<div class="col">
                                             <div class="h-100">
-                                                <img src="${cookie.image}" class="card-img-top">
+                                                <div onclick="addToCart(event)" style="position: relative; z-index: 1">
+                                                    <img src="${cookie.image}" class="card-img-top ${cookie.name}">
+                                                    <div class="text-overlay" style="position: absolute; top: 43%; left:26%; z-index: 3; font-size: x-large">Add To Cart</div>
+                                                </div>
                                                 <div class="card-body">
                                                     <h5 class="card-title">${cookie.name}</h5>
                                                     <p class="card-text">$${cookie.price.toFixed(2)} per Dozen</p>
@@ -136,3 +144,13 @@ $(document).ready(function() {
         }
     });
 });
+
+function addToCart(event){
+    console.log((event.target.className).substring(13,999))
+    let cookiename = (event.target.className).substring(13,999)
+    for(i in cookieList){
+        if(cookieList[i].name == cookiename){
+            console.log(cookieList[i])
+        }
+    }
+}

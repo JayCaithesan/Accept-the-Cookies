@@ -136,3 +136,34 @@ hr {
 .black-text{
     color:black;
 }
+ 
+/* ANIMATIONS  */
+.card-img-top{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.text-overlay{
+    opacity: 0;
+    color: white;
+    pointer-events: none;
+}
+
+.card-img-top:hover ~ .text-overlay{
+    opacity: 1;
+}
+
+
+.card-img-top:hover{
+    animation: darken 0.5s forwards;
+    animation-play-state: running;
+}
+
+@keyframes darken{
+    0%{
+        filter: brightness(100%)
+    }
+    100%{
+        filter: brightness(50%)
+    }
+}
