@@ -59,7 +59,8 @@ Contributions by each group member:
     -Live chat
         -pug
         -socket/multi threading
-
+    -helped with writing the readMe.txt
+    
     -files involved with:
         -JS: dataBase.js,index.js
         -HTML: accessAbout.html,accessIndex.html,accessContact.html,accesProduct.html
@@ -83,3 +84,4 @@ Contributions by each group member:
 -Ryan Don (100824494)
 
 -Joshua Jesuthasan (100820441)
+    -did not contribute
