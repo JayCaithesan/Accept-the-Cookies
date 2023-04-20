@@ -58,12 +58,12 @@ Contributions by each group member:
 		-pug
 		-socket/multi threading
 	-files involve:
-		dataBase.js,index.js
-		accessAbout.html,accessIndex.html,accessContact.html,accesProduct.html
-		accountInfo.pug,adminListChat.pug,login.pug,signUp.pug
-		chat.js,accessIndex.js
-		chat.css,adminChat.css
-		Account.csv
+		-JS: dataBase.js,index.js
+		-HTML: accessAbout.html,accessIndex.html,accessContact.html,accesProduct.html
+		-Views/Pug: accountInfo.pug,adminListChat.pug,login.pug,signUp.pug
+		-JS: chat.js,accessIndex.js
+		-CSS: chat.css,adminChat.css
+		-CSV: Account.csv
 
 -Jayanthan Caithesan (100828033)
 
