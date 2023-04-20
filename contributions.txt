@@ -1,0 +1,106 @@
+Contributions by each group member:
+
+-Shian Li Chen (100813628) = 
+    -creation of the contact page including HTML, CSS and JS
+        -includes the usage of:
+            -font awesome
+            -bootstrap forms and framework in general  
+            -JQuery
+            -Regular Expressions
+            -downloading JSON data
+            -Dynamic HTML (DHTML)
+    -creation of the poll page including HTML, CSS and JS
+        -includes the usage of:
+            -font awesome
+            -bootstrap framework in general  
+            -JQuery
+            -D3
+            -SVG
+            -Dynamic HTML (DHTML)
+            -Ajax
+            -Vue Condition Rendering 
+            -Vue Data and Methods
+            -Vue app
+    -creation and usage of the sample data from the poll.json file 
+    -creation of the group_members page including HTML and CSS 
+        -includes the usage of:
+            -font awesome
+            -bootstrap framework in general 
+    -helped with about and index page styling and creation  
+    -performed the merge of each branch of the GitHub and consolidated all the work to create the finished application
+        -worked with all js, HTML, CSS, JSON, pug files
+
+    -files involved with (creating/editing/merging):
+        -CSS: about.css,contact.css,group_members.css,poll.css,styles.css
+        -JS: contact.js,poll.js,index.js
+        -Views/Pug: accountInfo.pug
+        -HTML: about.html,contact.html,group_members.html,index.html,poll.html,accessAbout.html,accessContact.html,accessGroupMembers.html,
+               accessIndex.html,accessPoll.html,accessProduct.html
+        -JSON: poll.json
+
+
+-Thanushan Satheeskumar (100784004)=
+    - Navbar (Structure with HTML, Styling with Bootstrap + CSS, Logo Creation with Canva.com)
+    - Home Page (Structure with HTML, Styling with Bootstrap + CSS, Functionality with jQuery)
+    - Products Page (Structure with HTML, Styling with Bootstrap + CSS, Functionality with JavaScript + jQuery + AJAX)
+    - Footer (Structure with HTML, Styling with Bootstrap + CSS)
+
+    - files involved with: 
+        -HTML: index.html,product.html,group_members.html
+        -CSS: about.css,styles.css,group_members.css
+        -IMG: imported all jpg and png files
+        -JS: product.js
+
+-James Yang (100838500)=
+    -Sign in/ sign up functionality
+        -pug
+        -session ID
+        -access mongodb(database)-insert/change document
+    -Live chat
+        -pug
+        -socket/multi threading
+    -helped with writing the readMe.txt
+    
+    -files involved with:
+        -JS: dataBase.js,index.js
+        -HTML: accessAbout.html,accessIndex.html,accessContact.html,accesProduct.html
+        -Views/Pug: accountInfo.pug,adminListChat.pug,login.pug,signUp.pug
+        -JS: chat.js,accessIndex.js
+        -CSS: chat.css,adminChat.css
+        -CSV: Account.csv
+
+-Jayanthan Caithesan (100828033)=
+    -Helped pick wed app colour scheme
+    -Home Page(Designed page structure, helped create HTML structure, styling with bootstrap)
+    -Products Page (Designed page structure,added more data to products json, added a product quantity value)
+    -About Page (Created company story, structure with HTML, Styling with CSS and Bootstrap)
+
+    -files involved in:
+        -HTML: index.html,product.html,about.html
+        -CSS: about.css,styles,css
+        -Readme: created readme
+        -Recording: recorded project video, explained website design and use
+
+-Ryan Don (100824494)=
+    -creation of cart page and creation/usage of cart.json file
+        -includes the usage of:
+            -font awesome
+            -bootstrap framework
+            -JQuery
+            -Ajax
+            -Dynamic HTML
+    -added functionality for adding to cart from the product page
+    -added styling and css animations to cart page and product page
+    -account used for icons on fontawesome.com
+    -likeness used in about us page
+
+    -files involved in:
+        -HTML: cart.html,product.html
+        -CSS: about.css,styles.css,cart.css
+        -JS: product.js,cart.js
+        -JSON: cart.json
+        -Readme: created readme
+        -Recording: recorded project video, explained website design and use
+
+-Joshua Jesuthasan (100820441)
+    -did not contribute
