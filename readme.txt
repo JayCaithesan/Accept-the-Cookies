@@ -1,7 +1,4 @@
-# Accept-the-Cookies
-
-
-## How to Run
+How to Run Instructions:
 
 1. Obtain a local copy of the software by executing the following Git command: git clone https://github.com/JayCaithesan/Accept-the-Cookies or unzip the download folder
 2. Navigate to the newly created directory Accept-the-Cookies using the Command Prompt and execute the command npm install to download all required dependencies for the project.
