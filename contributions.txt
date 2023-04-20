@@ -102,5 +102,6 @@ Contributions by each group member:
         -Readme: created readme
         -Recording: recorded project video, explained website design and use
 
--Joshua Jesuthasan (100820441)
-    -did not contribute
+-Joshua Jesuthasan (100820441)=
+    -helped with debugging
+    -edited readMe
