@@ -68,7 +68,17 @@ Contributions by each group member:
         -CSS: chat.css,adminChat.css
         -CSV: Account.csv
 
--Jayanthan Caithesan (100828033)
+-Jayanthan Caithesan (100828033)=
+    -Helped pick wed app colour scheme
+    -Home Page(Designed page structure, helped create HTML structure, styling with bootstrap)
+    -Products Page (Designed page structure,added more data to products json, added a product quantity value)
+    -About Page (Created company story, structure with HTML, Styling with CSS and Bootstrap)
+
+    -files involved in:
+        -HTML: index.html,product.html,about.html
+        -CSS: about.css,styles,css
+        -Readme: created readme
+        -Recording: recorded project video, explained website design and use
 
 -Ryan Don (100824494)
 
