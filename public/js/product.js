@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function() {
     // Imports cookies.json for products page
     fetch('cookies.json')
@@ -12,6 +15,7 @@ $(document).ready(function() {
                                         <div class="card-body">
                                             <h5 class="card-title">${cookie.name}</h5>
                                             <p class="card-text">$${cookie.price.toFixed(2)} per Dozen</p>
+                                            <p class="card-text">Quantity Available: ${cookie.quantity}</p>
                                         </div>
                                     </div>
                                 </div>`;
